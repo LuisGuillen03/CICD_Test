@@ -292,7 +292,7 @@ This is the **most important step** to keep sensitive values out of your reposit
 | `_ARTIFACT_REGISTRY_REPO` | `app-repo` | Name you used when creating Artifact Registry |
 | `_IMAGE_NAME` | `demo-flask-app` | Name for your Docker image |
 | `_CLOUD_RUN_SERVICE_NAME` | `py-bq-load` | Name for your Cloud Run service |
-| `_PORT` | `8000` | Port your Flask app runs on |
+| `_API_PORT` | `8000` | Port your Flask app runs on |
 | `_GCP_PROJECT_ID` | `your-project-id` | Your actual GCP project ID |
 | `_BQ_DATASET` | `test_schema` | BigQuery dataset name you created |
 | `_BQ_TABLE_NAME` | `us_states` | BigQuery table name you created |
@@ -333,7 +333,7 @@ The following substitution variables are used in `cloudbuild.yaml`:
 | `_ARTIFACT_REGISTRY_REPO` | Artifact Registry repository | `app-repo` |
 | `_IMAGE_NAME` | Docker image name | `demo-flask-app` |
 | `_CLOUD_RUN_SERVICE_NAME` | Cloud Run service name | `py-bq-load` |
-| `_PORT` | Application port | `8000` |
+| `_API_PORT` | Application port | `8000` |
 | `_GCP_PROJECT_ID` | GCP project ID | `your-project-id` |
 | `_BQ_DATASET` | BigQuery dataset | `test_schema` |
 | `_BQ_TABLE_NAME` | BigQuery table | `us_states` |

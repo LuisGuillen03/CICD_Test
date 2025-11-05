@@ -5,7 +5,7 @@ substitutions:
   _ARTIFACT_REGISTRY_REPO: ''
   _IMAGE_NAME: ''
   _CLOUD_RUN_SERVICE_NAME: ''
-  _PORT: ''
+  _API_PORT: ''
   # Runtime environment variables for the application
   _GCP_PROJECT_ID: ''
   _BQ_DATASET: ''
@@ -39,9 +39,9 @@ steps:
    - '${_GCP_REGION}'
    - '--allow-unauthenticated'
    - '--port'
-   - '${_PORT}'
+   - '${_API_PORT}'
    - '--set-env-vars'
-   - 'GCP_PROJECT_ID=${_GCP_PROJECT_ID},BQ_DATASET=${_BQ_DATASET},BQ_TABLE_NAME=${_BQ_TABLE_NAME},GCS_BUCKET_NAME=${_GCS_BUCKET_NAME},GCS_CSV_FILE_PATH=${_GCS_CSV_FILE_PATH},PORT=${_PORT}'
+   - 'GCP_PROJECT_ID=${_GCP_PROJECT_ID},BQ_DATASET=${_BQ_DATASET},BQ_TABLE_NAME=${_BQ_TABLE_NAME},GCS_BUCKET_NAME=${_GCS_BUCKET_NAME},GCS_CSV_FILE_PATH=${_GCS_CSV_FILE_PATH},PORT=${_API_PORT}'
 
 images:
 - '${_GCP_REGION}-docker.pkg.dev/$PROJECT_ID/${_ARTIFACT_REGISTRY_REPO}/${_IMAGE_NAME}:$COMMIT_SHA'
